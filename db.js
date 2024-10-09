@@ -1,9 +1,10 @@
-{
-    "usuarios": [
+
+usuarios = [
       {
         "user_id": "1",
         "nombre": "Juan Pérez",
         "email": "juan.perez@example.com",
+        "role":"usuario",
         "contraseña": "encrypted_password_1",
         "fecha_registro": "2024-01-15 12:34:56"
       },
@@ -11,11 +12,29 @@
         "user_id": "2",
         "nombre": "María Gómez",
         "email": "maria.gomez@example.com",
+        "role":"usuario",
         "contraseña": "encrypted_password_2",
         "fecha_registro": "2024-02-10 14:20:00"
+      },
+      {
+        "user_id":"3",
+        "nombre": "Estefany",
+        "email":"estefany@example.com",
+        "role":"admin",
+        "contraseña":"1234",
+        "fecha_registro": "2024-09-10 14:20:00"
+      },
+      
+      {
+        "user_id":"4",
+        "nombre": "Juan Lópex",
+        "email":"juanpablo@example.com",
+        "role":"admin",
+        "contraseña":"1234",
+        "fecha_registro": "2024-09-10 14:20:00"
       }
     ],
-    "presupuesto": [
+presupuesto = [
       {
         "id": "1",
         "user_id": "1",
@@ -27,7 +46,7 @@
         "ingreso_mensual": 4000.00
       }
     ],
-    "tipoGasto": [
+tipoGasto= [
       {
         "id": "1",
         "nombre": "Alquiler"
@@ -41,7 +60,7 @@
         "nombre": "Transporte"
       }
     ],
-    "gastos": [
+gastos= [
       {
         "id": "1",
         "id_tipo_gasto": "1",
@@ -55,7 +74,7 @@
         "valor": 300.00
       }
     ],
-    "tarjetaCredito": [
+tarjetaCredito= [
       {
         "id": "1",
         "user_id": "1",
@@ -71,7 +90,7 @@
         "costos_adicionales": 5.00
       }
     ],
-    "tarjetaDebito": [
+tarjetaDebito= [
       {
         "id": "1",
         "user_id": "2",
@@ -82,7 +101,7 @@
         "cuota_manejo": 5.00
       }
     ],
-    "efectivo": [
+efectivo= [
       {
         "id": "1",
         "user_id": "1",
@@ -91,7 +110,7 @@
         "es_ingreso_mensual": true
       }
     ],
-    "saldoEfectivo": [
+saldoEfectivo= [
       {
         "id": "1",
         "saldo_total": 200.00,
@@ -100,7 +119,7 @@
         "actualizacion": "2024-10-01"
       }
     ],
-    "saldoTarjetaDebito": [
+saldoTarjetaDebito= [
       {
         "id": "1",
         "saldo_total": 1000.00,
@@ -109,7 +128,7 @@
         "actualizacion": "2024-10-05"
       }
     ],
-    "saldoTarjetaCredito": [
+saldoTarjetaCredito= [
       {
         "id": "1",
         "saldo_total": 500.00,
@@ -118,7 +137,7 @@
         "actualizacion": "2024-10-10"
       }
     ],
-    "transacciones": [
+transacciones= [
       {
         "transaccion_id": "1",
         "cuenta_id": "1",
@@ -140,7 +159,7 @@
         "descripcion": "Sueldo mensual"
       }
     ],
-    "objetivos": [
+objetivos= [
       {
         "objetivo_id": "1",
         "user_id": "1",
@@ -150,5 +169,5 @@
         "fecha_objetivo": "2024-12-31"
       }
     ]
-  }
+
   

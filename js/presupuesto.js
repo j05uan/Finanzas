@@ -23,4 +23,11 @@ const cargarPresupuestos = async () => {
     }
 };
 
-cargarPresupuestos();
+// Cargar presupuetos
+
+for (let presupuesto of presupuesto){
+    console.log(carro);
+    if(presupuesto){
+        
+    }
+}
