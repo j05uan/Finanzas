@@ -7,7 +7,6 @@ header{
 
 #logo
 {
-    
 }
 
 #logo h1{
@@ -45,3 +44,49 @@ header{
 
 }
 
+/* Media Queries para responsividad */
+
+/* Dispositivos móviles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #logo {
+        flex-direction: column;
+    }
+
+    #logo img {
+        margin: 10px 0;
+    }
+
+    #perfil {
+        margin: 10px auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+
+/* Dispositivos tipo tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #logo h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        justify-content: space-between;
+    }
+
+    #perfil img {
+        width: 50px;
+        height: 50px;
+    }
+}

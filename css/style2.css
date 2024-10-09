@@ -1,0 +1,121 @@
+/* Estilo global */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Contenedor general */
+#container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Ajuste para el perfil */
+#perfil {
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 15%;
+    padding: 10px;
+    margin: 10px;
+}
+
+#perfil img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+/* Ajuste para el logo */
+#logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#logo h1 {
+    font-size: 2rem;
+    -webkit-text-stroke: 1px rgb(202, 137, 130);
+    color: transparent;
+    margin: 0 10px;
+}
+
+#logo img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Ajuste del layout */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav {
+    background-color: #f8f8f8;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+/* Media Queries para responsividad */
+
+/* Dispositivos móviles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #logo {
+        flex-direction: column;
+    }
+
+    #logo img {
+        margin: 10px 0;
+    }
+
+    #perfil {
+        margin: 10px auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+
+/* Dispositivos tipo tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #logo h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        justify-content: space-between;
+    }
+
+    #perfil img {
+        width: 50px;
+        height: 50px;
+    }
+}
