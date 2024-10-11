@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    width: 100%;
+}
+
+#finanzas { 
+    width: 100%;
+}
+.barra-tareas {
+    background-color: #575252;
+    color: rgb(23, 232, 247);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.icono {
+    cursor: pointer;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.login{
+    border: 1px solid burlywood;
+}
+.icono:hover {
+    background-color: #444;
+}
+
+
+.login-container {
+    background-color: white;
+    padding: 2rem;
+    padding-right: 3rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+
+}
+
+h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444;
+}
+#recomendaciones {
+    width: 100%;
+}

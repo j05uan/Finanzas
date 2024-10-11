@@ -112,13 +112,13 @@ window.onload = checkIfLocked;
 
 // configuracion del log out
 // Obtener el botón de logout
-const logoutButton = document.getElementById("logoutButton");
+// const logoutButton = document.getElementById("logoutButton");
 
-// Añadir el evento click para cerrar sesión
-logoutButton.addEventListener("click", function() {
-    localStorage.removeItem("usuario");   // Elimina el nombre del usuario
-    localStorage.clear();
+// // Añadir el evento click para cerrar sesión
+// logoutButton.addEventListener("click", function() {
+//     localStorage.removeItem("usuario");   // Elimina el nombre del usuario
+//     localStorage.clear();
 
-    // Redirigir al usuario a la página de inicio o login
-    window.location.href = "";
-});
+//     // Redirigir al usuario a la página de inicio o login
+//     window.location.href = "home.html";
+// });

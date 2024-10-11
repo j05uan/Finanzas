@@ -30,7 +30,7 @@ function mostrarPresupuestos(listaPresupuestos, usuarios) {
         const presupuestoDiv = document.createElement("div");
         presupuestoDiv.classList.add("presupuesto"); // Agregar una clase para estilos
 
-        // Crear el contenido HTML para el presupuesto
+        // Crear el contenido HTML para el presupuesto 
         presupuestoDiv.innerHTML = `
             <h3>Presupuesto ID: ${presupuesto.id}</h3>
             <p>User ID: ${presupuesto.user_id}</p>
