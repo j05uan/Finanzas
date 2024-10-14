@@ -6,7 +6,7 @@ usuarios = [
         "email": "juan.perez@example.com",
         "telefono":"+57 3129090890",
         "role":"usuario",
-        "contraseña": "$2a$10$uB32Qw1X3Hn2rrcmdY8IFOjaBm5PdicxcajZ2AaMNbsAqQuwOYXn2",
+        "contraseña":"A6xnQhbz4Vx2HuGl4lXwZ5U2I8iziLRFnhP5eNfIRvQ=",
         "fecha_registro": "2024-01-15 12:34:56"
       },
       {
@@ -15,16 +15,16 @@ usuarios = [
         "email": "maria.gomez@example.com",
         "telefono":"+57 3129189092",
         "role":"usuario",
-        "contraseña": "$2a$10$uB32Qw1X3Hn2rrcmdY8IFOjaBm5PdicxcajZ2AaMNbsAqQuwOYXn2",
+        "contraseña":"A6xnQhbz4Vx2HuGl4lXwZ5U2I8iziLRFnhP5eNfIRvQ=",
         "fecha_registro": "2024-02-10 14:20:00"
       },
       {
         "user_id":"3",
-        "nombre": "Estefany",
+        "nombre": "Estefany Rueda",
         "email":"estefany@example.com",
         "telefono":"+57 3007890983",
         "role":"admin",
-        "contraseña":"$2a$10$uB32Qw1X3Hn2rrcmdY8IFOjaBm5PdicxcajZ2AaMNbsAqQuwOYXn2",
+        "contraseña":"A6xnQhbz4Vx2HuGl4lXwZ5U2I8iziLRFnhP5eNfIRvQ=",
         "fecha_registro": "2024-09-10 14:20:00"
       },
       
@@ -34,7 +34,7 @@ usuarios = [
         "email":"juanpablo@example.com",
         "telefono":"+57 3182589714",
         "role":"admin",
-        "contraseña":"$2a$10$uB32Qw1X3Hn2rrcmdY8IFOjaBm5PdicxcajZ2AaMNbsAqQuwOYXn2",
+        "contraseña":"A6xnQhbz4Vx2HuGl4lXwZ5U2I8iziLRFnhP5eNfIRvQ=",
         "fecha_registro": "2024-09-10 14:20:00"
       }
     ],
