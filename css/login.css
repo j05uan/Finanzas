@@ -31,12 +31,15 @@ body {
 
 .icono {
     cursor: pointer;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     text-transform: uppercase;
     text-decoration: none;
+    color: aliceblue;
 }
 .login{
     border: 1px solid burlywood;
+    padding: .4rem 1rem;
+
 }
 .icono:hover {
     background-color: #444;

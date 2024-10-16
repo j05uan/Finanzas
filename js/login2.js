@@ -115,7 +115,6 @@ loginForm.addEventListener("submit", async function (event) {
 
 // Comprobar si la cuenta está bloqueada al cargar la página
 window.onload = checkIfLocked;
-// console.log(hashPassword(1234));
 
 
 // configuracion del log out

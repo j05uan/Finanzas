@@ -1,22 +1,20 @@
 const http = require('http');
 
 const hostname = 'localhost';
-const port = 3000; // Puedes cambiar el puerto si lo deseas
+const port = 3000; 
 
 const server = http.createServer((req, res) => {
-    res.statusCode = 200; // Código de estado OK
+    res.statusCode = 200; 
     res.setHeader('Content-Type', 'application/json');
 
-    // Verifica la ruta de la solicitud
     if (req.method === 'GET' && req.url === '/presupuesto') {
-        // Aquí puedes devolver datos de presupuestos
         const presupuestos = [
             { id: 1, nombre: "Presupuesto 1" },
             { id: 2, nombre: "Presupuesto 2" }
         ];
-        res.end(JSON.stringify(presupuestos)); // Devuelve los presupuestos como JSON
+        res.end(JSON.stringify(presupuestos)); 
     } else {
-        res.statusCode = 404; // Código de estado Not Found
+        res.statusCode = 404; 
         res.end(JSON.stringify({ mensaje: 'Ruta no encontrada' }));
     }
 });

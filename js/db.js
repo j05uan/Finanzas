@@ -27,10 +27,9 @@ usuarios = [
         "contraseña":"A6xnQhbz4Vx2HuGl4lXwZ5U2I8iziLRFnhP5eNfIRvQ=",
         "fecha_registro": "2024-09-10 14:20:00"
       },
-      
       {
         "user_id":"4",
-        "nombre": "Juan Lópex",
+        "nombre": "Juan López",
         "email":"juanpablo@example.com",
         "telefono":"+57 3182589714",
         "role":"admin",
@@ -53,15 +52,39 @@ presupuesto = [
 tipoGasto= [
       {
         "id": "1",
-        "nombre": "Alquiler"
+        "nombre": "Vivienda"
       },
       {
         "id": "2",
-        "nombre": "Comida"
+        "nombre": "Alimentacion"
       },
       {
         "id": "3",
         "nombre": "Transporte"
+      },
+      {
+        "id": "4",
+        "nombre":"Salud"
+      },
+      {
+        "id":"5",
+        "nombre":"Educacion"
+      },
+      {
+        "id":"6",
+        "nombre":"Finanzas e inversiones"
+      },
+      {
+        "id":"7",
+        "nomnbre":"Gastos Personales o Familiares"
+      },
+      {
+        "id":"8",
+        "nombre":"Ocio"
+      },
+      {
+        "id":"9",
+        "nombre":"otros"
       }
     ],
 gastos= [
