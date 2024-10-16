@@ -1,34 +1,71 @@
 // Cargar presupuestos
-const listaPresupuestos = [];
+let listaPresupuestos = [];  // Ahora es una variable global que puedes modificar desde cualquier función
 const userId = localStorage.getItem("userId"); 
+const container = document.getElementById("rightContainer");
 
-if (userId) { // Verificar que userId no sea null o undefined
-    for (let presupuesto of presupuestos) { 
-        if (presupuesto.user_id === userId) {
-            listaPresupuestos.push(presupuesto);
+function verificar() {
+    if (userId) {
+        // Buscar al usuario por user_id en la lista de usuarios
+        const usuario = usuarios.find(user => user.user_id === userId);
+
+        if (usuario) {
+            console.log("Bienvenido " + usuario.nombre);
+
+            // Asignar presupuestos filtrados directamente a la variable global listaPresupuestos
+            listaPresupuestos = presupuestos.filter(presupuesto => presupuesto.user_id === userId);
+            
+            if (listaPresupuestos.length > 0) {
+                console.log("Presupuestos encontrados:", listaPresupuestos);
+            } else {
+                console.log("No se encontraron presupuestos para el usuario.");
+            }
+
+            // Llamar a mostrarPresupuestos después de verificar
+            mostrarPresupuestos();
+
+        } else {
+            console.warn("Usuario no encontrado.");
         }
+    } else {
+        console.warn("No se encontró userId en localStorage.");
     }
-} else {
-    console.warn("No se encontró userId en localStorage.");
 }
 
-function mostrarPresupuestos(listaPresupuestos, usuarios) {
-    const contenedor = document.getElementById("presupuestosContainer");
-    contenedor.innerHTML = ""; // Limpiar el contenedor antes de agregar nuevos presupuestos
+
+window.onload = function() {
+    verificar(); // Verificar primero y luego mostrar presupuestos
+};
+
+// Mostrar los presupuestos en el contenedor
+function mostrarPresupuestos() {
+    container.innerHTML = ""; // Limpiar el contenedor antes de agregar nuevos presupuestos
 
     if (listaPresupuestos.length === 0) {
-        contenedor.innerHTML = "<p>No hay presupuestos disponibles.</p>";
+        container.innerHTML = "<p>No hay presupuestos disponibles.</p>";
         return;
     }
 
+    const nuevoPresupuesto = document.createElement("div");
+    nuevoPresupuesto.classList.add("nuevoPresupuesto");
+    nuevoPresupuesto.innerHTML = `
+        <h4> Añadir Presupuesto</h4>
+        <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="110" height="50" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"/>
+            </svg>
+        </button>
+    `;
+    container.appendChild(nuevoPresupuesto);
+
+
     listaPresupuestos.forEach(presupuesto => {
         // Buscar el nombre del usuario por user_id
-        const usuario = usuarios.find(user => user.id === presupuesto.user_id);
+        const usuario = usuarios.find(user => user.user_id === presupuesto.user_id);
         const nombreUsuario = usuario ? usuario.nombre : "Usuario no encontrado";
-
+        
         // Crear un elemento para cada presupuesto
         const presupuestoDiv = document.createElement("div");
-        presupuestoDiv.classList.add("presupuesto"); // Agregar una clase para estilos
+        presupuestoDiv.classList.add("presupuesto");
 
         // Crear el contenido HTML para el presupuesto 
         presupuestoDiv.innerHTML = `
@@ -36,50 +73,13 @@ function mostrarPresupuestos(listaPresupuestos, usuarios) {
             <p>User ID: ${presupuesto.user_id}</p>
             <p>Nombre: ${nombreUsuario}</p>
             <p>Ingreso Mensual: $${presupuesto.ingreso_mensual.toFixed(2)}</p>
+
         `;
 
         // Agregar el elemento al contenedor
-        contenedor.appendChild(presupuestoDiv);
-    });
-}
-
-function actualizarPresupuesto(id, nuevosDatos) {
-    // Buscar el índice del presupuesto en la lista
-    const index = listaPresupuestos.findIndex(presupuesto => presupuesto.id === id);
-
-    // Si se encuentra el presupuesto, se actualizan los datos
-    if (index !== -1) {
-        listaPresupuestos[index] = {
-            ...listaPresupuestos[index],  // Conservar los datos existentes
-            ...nuevosDatos                 // Aplicar los nuevos datos
-        };
-
-        // Actualizar el localStorage (si es necesario)
-        localStorage.setItem("listaPresupuestos", JSON.stringify(listaPresupuestos));
-
-        console.log("Presupuesto actualizado:", listaPresupuestos[index]);
-        return listaPresupuestos[index]; // Retornar el presupuesto actualizado
-    } else {
-        console.error("Presupuesto no encontrado.");
-        return null; // O lanzar un error
+        container.appendChild(presupuestoDiv);
     }
-}
 
-
-function eliminarPresupuesto(id) {
-    const index = listaPresupuestos.findIndex(presupuesto => presupuesto.id === id);
-
-    // Si se encuentra el presupuesto, se elimina
-    if (index !== -1) {
-        const presupuestoEliminado = listaPresupuestos.splice(index, 1)[0]; // Elimina el presupuesto del array
-
-        // Actualizar el localStorage (si es necesario)
-        localStorage.setItem("listaPresupuestos", JSON.stringify(listaPresupuestos));
-
-        console.log("Presupuesto eliminado:", presupuestoEliminado);
-        return presupuestoEliminado; // Retornar el presupuesto eliminado
-    } else {
-        console.error("Presupuesto no encontrado.");
-        return null; // O lanzar un error
-    }
+    
+);
 }

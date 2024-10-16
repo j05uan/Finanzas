@@ -47,6 +47,8 @@ header{
 #perfil img{
     width: 60px;
     height: 60px;
+    display: flex;
+    justify-content: space-around;
 
 }
 body{
@@ -72,8 +74,41 @@ nav a{
 }
 i{
     font-size: 400em;
+    
 }
+li{
+    list-style: none;
 
+}
+#logoutButton{
+    border: none;
+    background-color: transparent;
+}
+#body{
+    display: grid;
+    grid-template-rows: 15% auto;
+    margin-top: 2rem;
+    padding-left: 4rem;
+}
+/* .nuevoPresupuesto{
+    border: 1px solid black;
+    width: 24%;
+    height: 9em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+} */
+.nuevoPresupuesto svg{
+    color: rgb(149, 149, 236);
+    
+}
+#rightContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    
+}
 /* Media Queries para responsividad */
 
 /* Dispositivos móviles */

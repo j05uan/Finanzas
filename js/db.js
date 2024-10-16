@@ -37,7 +37,7 @@ usuarios = [
         "fecha_registro": "2024-09-10 14:20:00"
       }
     ],
-presupuesto = [
+presupuestos = [
       {
         "id": "1",
         "user_id": "1",
